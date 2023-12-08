@@ -1,0 +1,17 @@
+{
+    "name": "aluno/biblioteca",
+    "autoload": {
+        "psr-4": {
+            "Aluno\\Biblioteca\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "guhdobraga",
+            "email": "guhdobraga@gmail.com"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "^2.0"
+    }
+}

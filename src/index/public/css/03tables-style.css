@@ -1,0 +1,66 @@
+/* Estilo básico da lista */
+ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+
+  .emprestados {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .item-1 {
+    width: 18vw;
+
+    margin-left: 15px;
+  }
+  
+  /* Estilo dos itens da lista */
+  .emprestados li {
+   
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: background-color 0.5s;
+  }
+  
+  /* Efeito de hover nos itens da lista */
+  .emprestados li:hover {
+    background-color: #ddd;
+  }
+
+.devolver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.devolver:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+  
+  
+  /* Estilo do botão de devolução */
+  .devolver button {
+    background-color: #655025;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 3px 1px 2px rgba(0, 0, 0, 0.171);
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  

@@ -1,0 +1,354 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.esq {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18vw;
+    background-color: #c5a36d;
+}
+
+.text-logo {
+    display: flex;
+    padding: 10px;
+    background-color: #c5a36d;
+    min-height: 5vh;
+}
+
+.text-logo h1 {
+    text-align: center;
+    font-size: 23px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    background-color: #deba83; /* Azul */
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+nav {
+    background: linear-gradient(45deg, #655025, #7a5d2b);
+    color: #fff;
+    padding: 1em 0;
+    top: 0;
+    z-index: 1000;
+    width: 18vw;
+    height: auto; /* Largura da barra lateral */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #2c3e50; /* Cor de destaque ao passar o mouse */
+}
+
+.user-ico {
+    display: flex;
+    justify-content: initial;
+    padding: 10px;
+    transition: transform 0.8s, filter 0.8s;
+}
+
+.user-ico:hover {
+    filter: brightness(1.4);
+}
+
+
+.user-ico img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.8s, filter 0.8s;
+
+}
+
+.user-ico img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+
+}
+
+.user-title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 15px;
+    font-weight: lighter;
+}
+
+.user-icon {
+    display: flex;
+}
+
+
+.flex {
+    display:flex;
+    
+}
+
+.sidebar {
+    background-color: #2f0144; /* Azul */
+    color: #fff;
+    padding: 20px;
+    width: 200px;
+}
+
+.user-level {
+    display: flex;
+    justify-content: initial;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:15px;
+    font-weight: lighter;
+    transition: color 0.3s;
+}
+
+.user-level:hover {
+    color: #deba83;
+   
+
+    transition: color 0.5s;
+}
+
+.user-level:hover {
+    color: #deba83;
+}
+
+.list{
+    display: flex;
+    justify-content: ;
+    font-size: 20px;
+    width: 18vw;
+    border-radius: 8px; 
+    font-size: 20px;
+    line-height: 3.0; /* Ajuste o valor conforme necessário */   
+}
+
+
+.list a {
+    width: 16.5vw;
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+    display: block; /* Torna o link ocupar toda a largura do contêiner */
+    padding: 10px;
+    border-radius: 4px;
+   
+}
+
+
+
+.list a:hover {
+    color: #deba83;
+    background-color: rgba(82, 97, 103, 0.608); /* Azul mais escuro */
+}
+
+
+.images  {
+    padding-right:15px ;
+}
+
+
+
+
+footer {
+    background-color: #deba83; 
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    margin-top: auto; /* Mover o footer para o final da página */
+}
+
+.user-ico {
+    cursor: pointer;
+}
+
+.user-info {
+    display: none;
+    position: absolute;
+    background: linear-gradient(45deg, #3b4a52, rgb(36, 45, 49));
+    border: 1px solid #ccc;
+    margin: 2.938rem 0 0 0;
+    padding: 0.625rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    height: 140px auto;
+    width: 100px auto;
+    left:60px;
+    height: 10px;
+    }
+
+    h6 {
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        transition: color 0.5s;
+    }
+
+    h6:hover {
+        color: #ff0800b7;
+    }
+
+.exitbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none ;
+    height: 10px;
+    color: white;
+    transition: color 0.3s;
+    
+}
+
+.exitbutton img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+}
+
+.login-button img { 
+    display: flex;
+    width: 12px;
+    height: 12px;
+
+}
+
+.livros-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100vw;
+    background-color: #ad9365;
+    padding: 10px;
+}
+
+.livro-nome {
+    color: #ffffff;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+    padding: 5px;
+
+}
+
+.livro-nome h3:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.livro-img {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.livro-img img {
+    border-radius: 10px;
+    border: solid 1px white;
+    box-shadow: 0px 2px 2px 2px rgba(255, 255, 255, 0.089);
+    
+    max-width: 40%;
+    height: 100%;
+    transition: box-shadow 0.3s;
+    transition: all 0.8s ease;
+
+}
+
+.livro-img img:hover {
+    transition: all 0.5s;
+    transform: scale(1.01);
+}
+
+.livro-1 {
+    margin-top: 25px;
+    height: 62vh;
+    width: 22vw;
+    background: linear-gradient(45deg, #655025, #7a5d2b);
+    border-radius: 15px;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.177);
+}
+
+.livro-preco {
+    padding: 10px;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #ff482c;
+    
+}
+
+.livro-button {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.livro-button button {
+    background: linear-gradient(45deg, #c0c0c0, rgb(255, 255, 255));
+    box-shadow: 0px 2px 2px 2px rgba(78, 78, 78, 0.315);
+    height: 50px;
+    width: 150px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.livro-button a {
+    font-size: 18px;
+    transition: color 0.3s;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+.livro-button a {
+    text-decoration: none;
+}
+
+.livro-button a:hover {
+    color: #007bffb7;
+}
+
+
+
+
+
+
+
+
+
+

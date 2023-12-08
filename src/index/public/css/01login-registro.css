@@ -1,0 +1,386 @@
+/* Estilos globais */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100vh;
+    background: #fff;
+    animation: fadeIn 2s;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     /* Define a imagem de fundo para o corpo da página */
+     
+}
+
+/* Estilos do formulário */
+form {
+    position: absolute;
+    right: 561px;
+    text-align: center;
+    /* background: #fff; */
+    background-color: #deba83;
+    padding: 30px;
+    border-radius: 101px;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.177);
+    max-width: 389px;
+    width: 100%;
+    transition: all 0.8s ease;
+}
+
+
+form:hover {
+    transform: scale(1.02);
+}
+
+form input,
+form button,
+form a {
+    margin: 10px 0;
+    width: calc(100% - 20px);
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 0.3s ease;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #7a5d2b;
+    box-shadow: 0 0 8px 0 #7a5d2b;
+}
+
+form button {
+    background:  #7a5d2b; 
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #655025;
+}
+
+form a {
+    display: block;
+    text-decoration: none;
+    color: #777;
+    background-color: #ad9365;
+    transition: color 0.3s;
+    position: relative;
+}
+
+form a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ac8c57;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+form a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+form h2 {
+    font-weight: lighter;
+    text-align: left;
+    font-size: 28px;
+    color: #7a5d2b;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+form:hover h2 {
+    color: #65502b;
+}
+
+.subtitle {
+    font-weight: lighter;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Animação de fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos do botão administrativo */
+.adm-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(45deg, #7a04b1, #1b0027);
+    box-shadow: 0 2px 28px rgba(0, 0, 0, 0.558);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.adm-button:hover {
+    border-color: #ffffff;
+    transition: 0.3s;
+    transform: scale(1.0);
+}
+
+.adm-button img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.8s, filter 0.8s;
+}
+
+.adm-button:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.adm-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(0);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+.adm-button:hover::after {
+    animation: none;
+}
+
+/* Estilos do modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    max-width: 300px;
+    text-align: center;
+    z-index: 999;
+    transition: all 0.3s;
+}
+
+.modal p {
+    margin-bottom: 20px;
+}
+
+.modal button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    background: #7a5d2b;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.modal button:hover {
+    background: #7a5d2b;
+}
+
+/* Estilos do fundo desfocado do modal */
+.modal-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fundo escurecido */
+    backdrop-filter: blur(5px);
+    z-index: 998;
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #999;
+    background: none;
+    border: none;
+}
+
+/* Estilos do fundo */
+.bg {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 60vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, rgb(204, 0, 187), 54, 230), rgb(134, 36, 158);
+    background-size: cover; /* ou 'contain', dependendo da preferência */
+    background-position: center; /* ou ajuste conforme necessário */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgb(172, 7, 144), #63025b), url('public/assets/img/logo.png');
+    background-size: cover; /* ou 'contain', dependendo da preferência */
+    background-position: center; /* ou ajuste conforme necessário */
+    z-index: -1; /* Para colocar o pseudo-elemento atrás do conteúdo da .bg */
+}
+
+/* Estilos do logo */
+.logo {
+    display: flex;
+    align-items: stretch;
+    bottom: 240px;
+    width: 250px; /* ajuste conforme necessário */
+    height: 250px;
+}
+
+.logo img {
+    width: 250px; /* ajuste conforme necessário */
+    height: 250px;
+}
+
+/* Outros estilos */
+.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    padding: 50px;
+    font-size: 35px;
+    line-height: 50px;
+    font-weight: 550;
+}
+
+.website {
+    position: absolute;
+    bottom: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+/* Estilos da imagem de fundo */
+.img-bg {
+    opacity: 0.2; /* Valor entre 0 (totalmente transparente) e 1 (totalmente opaco) */
+    width: 100%; /* Ajuste conforme necessário */
+    height: 100%; /* Ajuste conforme necessário */
+    object-fit: cover; /* Garante que a imagem cubra completamente o contêiner */
+    position: absolute; /* Ajuste conforme necessário */
+    top: 0;
+    right: 0; /* Coloca a imagem completamente à direita */
+    bottom: 0;
+    left: 0;
+}
+
+/* Texto de direitos autorais */
+.rights {
+    position: absolute;
+    bottom: -10px;
+    font-size: 12px;
+    font-weight: lighter;
+}
+@media only screen and (max-width: 600px) {
+    form {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content:center ;
+        right: 2%;
+        width: 80%;
+        padding: 5%;
+    }
+
+    form input,
+    form button,
+    form a {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+
+    form input:focus {
+        outline: none;
+        border-color: rgb(205, 28, 181);
+        box-shadow: 0 0 8px 0 #1c86cd;
+    }
+
+    form button {
+        font-size: 14px;
+    }
+
+    .adm-button {
+        bottom: 10%;
+        right: 5%;
+        width: 40px;
+        height: 40px;
+    }
+
+    .bg,
+    .bg::before,
+    .logo {
+        width: 100%;
+    }
+
+    .logo {
+        max-width: none;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .rights {
+        font-size: 10px;
+    }
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    
+}
